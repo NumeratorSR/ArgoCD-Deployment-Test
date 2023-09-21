@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: echo-ui
-  namespace: argocd-ns
 spec:
   replicas: 2
   revisionHistoryLimit: 3
