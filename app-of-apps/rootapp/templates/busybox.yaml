@@ -2,7 +2,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: busybox
-  namespace: app-of-apps
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -13,7 +12,6 @@ spec:
       path: app-of-apps/echo-server
   destination:
       server: {{ .Values.spec.destination.server }}
-      namespace: app-of-apps
   syncPolicy:
       automated:
         prune: true # Automatic sync will not delete resources if false
