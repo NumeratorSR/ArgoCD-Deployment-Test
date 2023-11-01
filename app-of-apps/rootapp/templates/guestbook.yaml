@@ -13,7 +13,6 @@ spec:
       path: app-of-apps/guestbook
   destination:
       server: {{ .Values.spec.destination.server }}
-      namespace: app-of-apps
   syncPolicy:
       automated:
         prune: true # Automatic sync will not delete resources if false
